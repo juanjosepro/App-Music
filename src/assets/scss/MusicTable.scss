@@ -1,0 +1,11 @@
+.cursor {
+  cursor:pointer;
+}
+.playing {
+  background: #4DB6AC;
+  color: #ffffff;
+  
+  &:hover {
+    color: #000000;
+  }
+}

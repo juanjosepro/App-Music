@@ -2,19 +2,22 @@
 
 import Vue from 'vue';
 import axios from "axios";
+import Store from '@/store';
 
 // Full config:  https://github.com/axios/axios#request-config
 // axios.defaults.baseURL = process.env.baseURL || process.env.apiUrl || '';
 // axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
+const token  = Store.state.login.token ? Store.state.login.token : '';
 let config = {
-  baseURL: process.env.baseURL || process.env.apiUrl || ""
+  baseURL: process.env.VUE_APP_APIURL, // || process.env.baseURL || ""
+  Authorization: 'bearer ' + token,
   // timeout: 60 * 1000, // Timeout
   // withCredentials: true, // Check cross-site Access-Control
 };
 
-const _axios = axios.create(config);
+export const _axios = axios.create(config);
 
 _axios.interceptors.request.use(
   function(config) {
