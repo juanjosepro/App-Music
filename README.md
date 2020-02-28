@@ -1,7 +1,7 @@
 # App Music
 
 ## Description
-This project is created with **Vue**, which consumes an [Api](https://github.com/api-appmusic "Api AppMusic") created in **Laravel**.
+This project is created with **Vue**, which consumes an [Api](https://github.com/JuanJoseStone/Api-App-Music "Api AppMusic") created in **Laravel**.
 
 App Music is an application in which each person can listen to all the music it contains and in addition to being able to load and save their own music in the application and be able to listen to it at any time.
 
